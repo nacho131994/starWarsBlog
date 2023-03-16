@@ -1,74 +1,62 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, {useState, useEffect} from "react";
+
 import "../../styles/home.css";
+import Card from "../component/card.jsx";
 
-export const Home = () => {
-const Card=[{
-	img: "https://i.blogs.es/1da08b/1366_2000-9-/1366_2000.jpeg",
-	title: "Star Wars",
-	description: "Star Wars",
-	button: "Star Wars",
-	buttonLike :"Star Wars"
-},
-{
-	img: "https://i.blogs.es/1da08b/1366_2000-9-/1366_2000.jpeg",
-	title: "Star Wars",
-	description: "Star Wars",
-	button: "Star Wars",
-	buttonLike :"Star Wars"
-},
-{
-	img: "https://i.blogs.es/1da08b/1366_2000-9-/1366_2000.jpeg",
-	title: "Star Wars",
-	description: "Star Wars",
-	button: "Star Wars",
-	buttonLike :"Star Wars"
-},{
-	img: "https://i.blogs.es/1da08b/1366_2000-9-/1366_2000.jpeg",
-	title: "Star Wars",
-	description: "Star Wars",
-	button: "Star Wars",
-	buttonLike :"Star Wars"
-},
-{
-	img: "https://i.blogs.es/1da08b/1366_2000-9-/1366_2000.jpeg",
-	title: "Star Wars",
-	description: "Star Wars",
-	button: "Star Wars",
-	buttonLike :"Star Wars"
-},
-{
-	img: "https://i.blogs.es/1da08b/1366_2000-9-/1366_2000.jpeg",
-	title: "Star Wars",
-	description: "Star Wars",
-	button: "Star Wars",
-	buttonLike :"Star Wars"
-}];
 
-return(
-	<div className="wrapper">
-		<div className="container row m-auto">
-	 {Card.map((item,index)=>{
-		return(
-		<div className="card col-3 w-25 m-5 " key={index}>
-			  <img src="..." className="card-img-top" alt="..."/>
-				  <div className="card-body">
-						<h5 className="card-title">{item.title}</h5>
-					 <p className="card-text">{item.description}</p>
-						<a href="#" className="btn btn-primary">Go somewhere</a>
-				  </div>
-		</div>
-)})
-}
- 
-	
-	
-	
-</div>
-</div>
-	
-)
+export const Home = () =>{
 
+	const [people,setPeople]=useState([]);
+	useEffect(()=>{
+		fetch("https://www.swapi.tech/api/people/")
+			.then(res => res.json())
+			.then(data => setPeople(data.results))
+			.catch(err => console.error(err))
+	})
+
+	const [planets,setPlanets]=useState([]);
+	useEffect(()=>{
+		fetch("https://www.swapi.tech/api/planets/")
+			.then(res => res.json())
+			.then(data => setPlanets(data.results))
+			.catch(err => console.error(err))
+	})
+
+	const [vehicles,setVehicles]=useState([]);
+	useEffect(()=>{
+		fetch("https://www.swapi.tech/api/vehicles/")
+			.then(res => res.json())
+			.then(data => setVehicles(data.results))
+			.catch(err => console.error(err))
+	})
+
+	
+
+	return(
+		<div className="wrapper">
+			<h1>people</h1>
+				<div className="card-group people">
+					{people.map((character,i)=>{
+					return <Card title={character.name} />
+					})}
+				</div>
+
+				<h1>planets</h1>
+				<div className="card-group planets">
+				
+					{planets.map((planet,i)=>{
+					return <Card title={planet.name} />
+					})}
+				</div>
+
+				<h1>vehicles</h1>
+				<div className="card-group vehicles">
+				
+					{vehicles.map((vehicle,i)=>{
+					return <Card title={vehicle.name} />
+					})}
+				</div>
+			</div>
+		);
 };
 	
-
