@@ -22,9 +22,9 @@ const Card = ({characters}) => {
             </Link>
             </div>   
                  
-                 </div>
-               </div>
-           </div>
+          </div>
+        </div>
+      </div>
 
 
 

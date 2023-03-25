@@ -6,7 +6,10 @@ const AppContextProvider = ({ children }) => {
   const [people, setPeople] = useState([]);
   const [vehiculos , setVehiculos] = useState([])
   const [planets , setPlanets] = useState([])
-  
+  const [favoriteList , setFavoriteList] = useState([])
+
+
+
   const fetchUrls = (url)=>{
  return (fetch(url)
   .then(res=>res.json())
@@ -44,7 +47,9 @@ const getCharacters = (setState , url) => {
     getCharacters(setVehiculos,"https://www.swapi.tech/api/vehicles/" )
   }, []);
 
- /* const [loading , setLoading] = useState(true)
+  
+ /* No Found, eternal loading
+ const [loading , setLoading] = useState(true)
   if(loading){
     return <Loader/>
   }
@@ -58,12 +63,10 @@ const getCharacters = (setState , url) => {
 const  store ={
   people,
   planets,
-  vehiculos
-
+  vehiculos,
+  favoriteList
 }
 const actions={
-
-
 
 }
 
