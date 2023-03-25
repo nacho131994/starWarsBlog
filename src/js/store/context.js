@@ -8,9 +8,7 @@ const AppContextProvider = ({ children }) => {
   const [planets , setPlanets] = useState([])
   const [favoriteList , setFavoriteList] = useState([])
 
-
-
-  const fetchUrls = (url)=>{
+const fetchUrls = (url)=>{
  return (fetch(url)
   .then(res=>res.json())
   .then(res => res)
@@ -47,6 +45,17 @@ const getCharacters = (setState , url) => {
     getCharacters(setVehiculos,"https://www.swapi.tech/api/vehicles/" )
   }, []);
 
+
+  const addFavorite =()=>{
+    const newFavorite ={
+      id: people.uid ,
+      name: people.name
+    } ;
+
+    setFavoriteList([...favoriteList , newFavorite])
+
+  }
+console.log(favoriteList)
   
  /* No Found, eternal loading
  const [loading , setLoading] = useState(true)
@@ -67,7 +76,7 @@ const  store ={
   favoriteList
 }
 const actions={
-
+addFavorite
 }
 
   return (

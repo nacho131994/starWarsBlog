@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import { useAppContext } from "../store/context.js";
 
 const Card = ({characters}) => {
+ const {store , actions} = useAppContext();
+ const { addFavorite} = actions;
+
   return (
     <>
   <div className="card-sw cardStyle">
@@ -18,7 +21,7 @@ const Card = ({characters}) => {
              </p>
           <div>
             <Link to="/characters/1" className="btn btn-primary btn-propierties">More info</Link>
-            <Link to =""><img className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
+            <Link to =""><img onClick={()=>addFavorite(characters.properties.uid, characters.properties.name)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
             </Link>
             </div>   
                  
