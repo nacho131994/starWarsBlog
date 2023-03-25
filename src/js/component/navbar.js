@@ -3,15 +3,28 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<>
+		<nav className="navbar navbar-dark  mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">STAR WARS</span>
+				<span className="navbar-brand m-3 h1">
+				<img className="iconNavbar" src="https://blog.phonehouse.es/wp-content/uploads/2017/12/1200px-Star_Wars_Logo.svg_.png"/>
+
+				</span>
 			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">FAVORITOS</button>
-				</Link>
-			</div>
+		<ul className="dropdownStyle  mt-3">	
+			<li className="nav-item dropdown ">
+          <a className="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Favoritos
+          </a>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+		</ul>
 		</nav>
+		
+		</>
 	);
 };

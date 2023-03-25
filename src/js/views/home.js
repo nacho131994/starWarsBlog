@@ -1,62 +1,53 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import { useAppContext } from "../store/context";
 
 import "../../styles/home.css";
-import Card from "../component/card.jsx";
+import Card from "../component/Card.jsx";
+import CardPlanet from "../component/CardPlanet.jsx";
+import CardVehiculos from "../component/CardVehiculos.jsx";
 
 
-export const Home = () =>{
+export const Home = () => {
+  const context = useAppContext();
+  const {store , actions} = context;
+  const {people , planets ,vehiculos} = store;
 
-	const [people,setPeople]=useState([]);
-	useEffect(()=>{
-		fetch("https://www.swapi.tech/api/people/")
-			.then(res => res.json())
-			.then(data => setPeople(data.results))
-			.catch(err => console.error(err))
-	})
 
-	const [planets,setPlanets]=useState([]);
-	useEffect(()=>{
-		fetch("https://www.swapi.tech/api/planets/")
-			.then(res => res.json())
-			.then(data => setPlanets(data.results))
-			.catch(err => console.error(err))
-	})
-
-	const [vehicles,setVehicles]=useState([]);
-	useEffect(()=>{
-		fetch("https://www.swapi.tech/api/vehicles/")
-			.then(res => res.json())
-			.then(data => setVehicles(data.results))
-			.catch(err => console.error(err))
-	})
-
-	
-
-	return(
-		<div className="wrapper">
-			<h1>people</h1>
-				<div className="card-group people">
-					{people.map((character,i)=>{
-					return <Card title={character.name} />
-					})}
-				</div>
-
-				<h1>planets</h1>
-				<div className="card-group planets">
+  return (
+    <>
+    
+      <div className="container p-4">
+        <h2>Characters</h2>
+        <div className="card-group ">
+				
+        <div className=" d-flex">
+        {people.map((characters, index) => (
+        <Card characters={characters} index={index} />
+      
+      ))}
+      </div>
+      </div>
+</div>
+<div className= "container  p-4">
+<h1>Planets</h1>
+				<div className="card-group ">
 				
 					{planets.map((planet,i)=>{
-					return <Card title={planet.name} />
+			return <CardPlanet key={i} planet={planet}/>
 					})}
 				</div>
-
-				<h1>vehicles</h1>
-				<div className="card-group vehicles">
+</div>
+<div className="container p-4">
+				<h1>Vehicles</h1>
+				<div className="card-group ">
 				
-					{vehicles.map((vehicle,i)=>{
-					return <Card title={vehicle.name} />
+					{vehiculos.map((vehicle,i)=>{
+				return <CardVehiculos key={i}  vehiculos={vehicle}/>
 					})}
 				</div>
-			</div>
-		);
+</div>
+
+    
+    </>
+  );
 };
-	

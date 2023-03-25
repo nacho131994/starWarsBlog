@@ -4,3 +4,64 @@
 .letras{
     font-size: 10px;;
 }
+body {
+ 
+    background-color: black;
+    color: white;
+    
+  }
+  .iconNavbar{
+width: 300px;
+
+  }
+  a {
+    color: yellow;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: honeydew;
+  }
+  
+  .cardStyle{
+    width: 330px;
+    border-radius: 5px;
+    border: solid 3px rgb(199, 199, 45);
+    margin: 5px;
+    text-align: center;
+  }
+  
+
+  .card-img{
+width: 300px;
+
+  }
+
+  
+  .btn-propierties {
+    background: white;
+    width: 150px;
+   padding: 5px;
+   padding-left: 10px;
+    border-radius: 20px;
+    color: #a3a3a3;
+    font-size: 15px;
+    box-shadow: -3px -5px 7px #e7d217bd;
+    
+  }
+  
+  .dropdownStyle{
+  margin-right: 20px;
+  padding-left: 0;
+  background-color: aqua;
+  border-radius: 5px;
+  list-style: none;
+  border: #a3a3a3;
+
+  }
+   
+  
+  
+  
+  
+ 
