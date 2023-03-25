@@ -16,8 +16,12 @@ const Card = ({characters}) => {
              <p>Gender: {characters.properties.gender}</p>
              <p>Eye color: {characters.properties.eye_color}
              </p>
-    
-            <Link to="/:type/:id" className="btn btn-primary btn-propierties">More info</Link>
+          <div>
+            <Link to="/characters/1" className="btn btn-primary btn-propierties">More info</Link>
+            <Link to =""><img className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
+            </Link>
+            </div>   
+                 
                  </div>
                </div>
            </div>
