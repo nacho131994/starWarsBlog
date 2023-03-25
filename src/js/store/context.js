@@ -1,11 +1,9 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-
+import Loader from "../component/loader";
 const AppContext = createContext();
 
 const AppContextProvider = ({ children }) => {
   const [people, setPeople] = useState([]);
- 
-
   const [vehiculos , setVehiculos] = useState([])
   const [planets , setPlanets] = useState([])
   
@@ -46,6 +44,16 @@ const getCharacters = (setState , url) => {
     getCharacters(setVehiculos,"https://www.swapi.tech/api/vehicles/" )
   }, []);
 
+ /* const [loading , setLoading] = useState(true)
+  if(loading){
+    return <Loader/>
+  }
+  useEffect(()=>{
+    if(people.length){
+      setLoading(false)
+    }
+  }, [people])
+*/
  
 const  store ={
   people,

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useAppContext } from "../store/context";
 
 import "../../styles/home.css";
@@ -30,8 +30,8 @@ export const Home = () => {
 </div>
 <div className= "container  p-4">
 <h1>Planets</h1>
-				<div className="card-group ">
-				
+			
+        <div className=" d-flex">
 					{planets.map((planet,i)=>{
 			return <CardPlanet key={i} planet={planet}/>
 					})}
@@ -39,8 +39,8 @@ export const Home = () => {
 </div>
 <div className="container p-4">
 				<h1>Vehicles</h1>
-				<div className="card-group ">
-				
+		
+        <div className=" d-flex ">
 					{vehiculos.map((vehicle,i)=>{
 				return <CardVehiculos key={i}  vehiculos={vehicle}/>
 					})}

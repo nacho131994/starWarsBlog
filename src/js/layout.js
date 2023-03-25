@@ -10,7 +10,7 @@ import { Home } from "./views/home";
 import Details from "./views/Details";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-
+import Loader from "./component/loader.js";
 //create your first component
 const Layout = () => {
 

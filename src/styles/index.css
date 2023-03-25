@@ -4,6 +4,13 @@
 .letras{
     font-size: 10px;;
 }
+.loader-background{
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
 body {
  
     background-color: black;
