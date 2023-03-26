@@ -18,11 +18,10 @@ export const Home = () => {
     
       <div className="container p-4">
         <h2>Characters</h2>
-        <div className="card-group ">
-				
-        <div className=" d-flex">
+        <div className="card-group">
+        <div className="row">
         {people.map((characters, index) => (
-        <Card characters={characters} index={index} />
+        <Card page="/" characters={characters} index={index} />
       
       ))}
       </div>

@@ -76,7 +76,8 @@ const  store ={
   favoriteList
 }
 const actions={
-addFavorite
+addFavorite,
+fetchDetails
 }
 
   return (

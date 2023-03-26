@@ -19,10 +19,12 @@ body {
   }
   .iconNavbar{
 width: 300px;
+height: 300px;
 
   }
   a {
-    color: yellow;
+    font-weight: 400px;
+    color: white;
     text-decoration: none;
   }
   
@@ -40,7 +42,7 @@ width: 300px;
   
 
   .card-img{
-width: 300px;
+width: 250px;
 
   }
 
@@ -58,9 +60,11 @@ width: 300px;
   }
   
   .dropdownStyle{
+
+  text-decoration: none;
   margin-right: 20px;
   padding-left: 0;
-  background-color: aqua;
+  background-color: rgb(127, 140, 214);
   border-radius: 5px;
   list-style: none;
   border: #a3a3a3;
@@ -70,6 +74,12 @@ width: 300px;
   .iconLike{
     width: 25px;
     float:right;
+    border-radius: 30%;
+    border:solid 1px #f70202;
+    box-shadow: 3px 5px 7px #f70202;
+  }
+  .iconLike:hover{
+  width: 30px;
   }
   
   
