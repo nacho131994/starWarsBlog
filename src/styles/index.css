@@ -18,17 +18,17 @@ body {
     
   }
   .iconNavbar{
-width: 300px;
+width: 500px;
 height: 300px;
 
   }
   a {
-    font-weight: 400px;
     color: white;
     text-decoration: none;
   }
   
   a:hover {
+  
     color: honeydew;
   }
   
@@ -84,4 +84,10 @@ width: 250px;
   
   
   
- 
+ .dontFavorite{
+  text-align: center;
+margin: 10px;
+font-size: 10px;
+color: grey;
+
+ }

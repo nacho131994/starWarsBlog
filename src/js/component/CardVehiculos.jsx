@@ -2,9 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const CardVehiculos=({key , vehiculos})=>{
     return(
-      
-
-      
+<div class="col-sm-4">
  <div className="card-sw cardStyle " key={key}>
   <img src={`https://starwars-visualguide.com/assets/img/vehicles/${vehiculos.uid}.jpg`} className="card-img mt-2" alt="..."/>
   <div className="card-body">
@@ -17,6 +15,7 @@ const CardVehiculos=({key , vehiculos})=>{
             </Link>
             </div>   
   </div>
+</div>
 </div>
     )
 }

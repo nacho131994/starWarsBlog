@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 const CardPlanet=({key , planet})=>{
     return(
 <>
-    <div className="card-sw col-3 cardStyle">
+<div class="col-sm-4">
+    <div className="card-sw cardStyle">
     <div key={planet.uid} className=" m-3 ">
         <img src={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`} className="card-img" alt="..."/>
     
@@ -21,7 +22,7 @@ const CardPlanet=({key , planet})=>{
     </div>
 
 
-
+</div>
 
 
    </>

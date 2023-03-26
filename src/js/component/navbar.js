@@ -11,7 +11,7 @@ export const Navbar = () => {
 		<>
 		<nav className="navbar navbar-dark  mb-3">
 			<Link to="/">
-				<span className="navbar-brand m-3 h1">
+				<span className="navbar-brand m-5">
 				<img className="iconNavbar" src="https://blog.phonehouse.es/wp-content/uploads/2017/12/1200px-Star_Wars_Logo.svg_.png"/>
 
 				</span>
@@ -24,14 +24,14 @@ export const Navbar = () => {
           	
 			{favoriteList.lenght? (
 			favoriteList.map((item,i)=>{
-				return (<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+				return (<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             	<li><a className="dropdown-item" href="#">{item.name}</a></li>
             	<li><a className="dropdown-item" href="#"></a></li>
             	<li><a className="dropdown-item" href="#"></a></li>
           	</ul>)
 			})) :
-			(<ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            	<li className=""></li>
+			(<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            	<li className="dontFavorite">You haven´t got favorite now</li>
           	</ul>)}
 			
         	</li>

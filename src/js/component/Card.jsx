@@ -20,14 +20,13 @@ const Card = ({page , characters}) => {
              <p>Eye color: {characters.properties.eye_color}
              </p>
           </div>
-           
-            </div>   
+             
             <Link to="people/1" className="btn btn-primary btn-propierties">More info</Link>
             <Link to =""><img onClick={()=>addFavorite(characters.properties.uid, characters.properties.name)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
             </Link> 
           </div>
         </div>
-
+</div>
     </>
   );
 };
