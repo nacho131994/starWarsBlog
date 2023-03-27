@@ -5,7 +5,8 @@ export const Navbar = () => {
 
 	const context = useAppContext();
 	const {store , actions} = context;
-	const {favoriteList} = store;
+	const { favoriteList} = store;
+	const {handelDeleteFavorite} = actions;
   
 	return (
 		<>
@@ -21,19 +22,18 @@ export const Navbar = () => {
           	<a className="nav-item p-3 dropdown-toggle " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Favoritos
          	 </a>
-          	
-			{favoriteList.lenght? (
-			favoriteList.map((item,i)=>{
-				return (<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            	<li><a className="dropdown-item" href="#">{item.name}</a></li>
-            	<li><a className="dropdown-item" href="#"></a></li>
-            	<li><a className="dropdown-item" href="#"></a></li>
-          	</ul>)
-			})) :
-			(<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            	<li className="dontFavorite">You haven´t got favorite now</li>
-          	</ul>)}
+          	<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 			
+			{favoriteList.map((item,i)=>{
+				return (
+
+            	<li className="d-flex">
+					<a className="dropdown-item" key={i} href="#">{item.name}</a>
+					<img className="iconDelete" onClick={()=>handelDeleteFavorite(item.name)} src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png"/>
+				</li>
+			)})
+          	}
+			</ul>
         	</li>
 		</ul>
 		</nav>

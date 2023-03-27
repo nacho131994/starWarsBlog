@@ -46,15 +46,20 @@ const getCharacters = (setState , url) => {
   }, []);
 
 
-  const addFavorite =()=>{
+  const addFavorite =(name)=>{
     const newFavorite ={
-      id: people.uid ,
-      name: people.name
+      name
     } ;
 
     setFavoriteList([...favoriteList , newFavorite])
 
   }
+
+const handelDeleteFavorite=(nameFavoriteDelete) => {
+        setFavoriteList(prev=>prev.filter((element)=>{
+      return (nameFavoriteDelete !== element.name);
+  }));
+}
 console.log(favoriteList)
   
  /* No Found, eternal loading
@@ -77,7 +82,8 @@ const  store ={
 }
 const actions={
 addFavorite,
-fetchDetails
+fetchDetails,
+handelDeleteFavorite
 }
 
   return (
