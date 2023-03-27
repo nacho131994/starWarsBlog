@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useAppContext } from "../store/context.js";
 
-const Card = ({page , characters}) => {
+const Card = ({characters ,index}) => {
  const {store , actions} = useAppContext();
  const { addFavorite } = actions;
 const name=characters.properties.name;
+
   return (
     <>
 
@@ -21,7 +22,7 @@ const name=characters.properties.name;
              </p>
           </div>
              
-            <Link to="people/1" className="btn btn-primary btn-propierties">More info</Link>
+            <Link to={`people/${index}`} className="btn btn-primary btn-propierties">More info</Link>
             <Link to =""><img onClick={()=>addFavorite(name)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
             </Link> 
           </div>

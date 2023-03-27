@@ -19,7 +19,7 @@ export const Home = () => {
         <div className="card-group">
         <div className="row">
         {people.map((characters, index) => (
-        <Card page="/" characters={characters} index={index} />
+        <Card  characters={characters} index={index} />
       
       ))}
       </div>
