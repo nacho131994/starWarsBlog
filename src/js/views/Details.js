@@ -4,7 +4,6 @@ const Details =()=>{
 
 
 const { id } = useParams();
-const idP = id+1
 const api =`https://www.swapi.tech/api/people/${id}`;
 const [detailPeople , setDetailPeople] = useState([])
 useEffect(()=>{
@@ -22,7 +21,7 @@ console.log("PARAMS:", params)
 return (
    <>
 <h1>Details</h1>
-<img  src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} />
+<img className="m-4" src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} />
 <p>{detailPeople.description}</p>
 
 

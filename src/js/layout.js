@@ -7,7 +7,8 @@ import AppContextProvider from "./store/context";
 
 import { Home } from "./views/home";
 
-import Details from "./views/Details";
+import Details from "./views/Details.js";
+import DetailsPlanet from "./views/DetailsPlanet.js";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Loader from "./component/loader.js";
@@ -24,6 +25,7 @@ const Layout = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="people/:id" element={<Details />} />
+            <Route path="planet/:id" element={<DetailsPlanet />} />
             <Route path="*" element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />
