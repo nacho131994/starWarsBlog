@@ -8,7 +8,7 @@ const DetailsPlanet =()=>{
     fetch(api)
     .then(res=>res.json())
     .then(res => {setDetailPlanet(res.result)
-    console.log(res)})
+    console.log(res.result.description)})
     .catch(err=> console.log(err))
     
     },[api])
@@ -19,10 +19,12 @@ const DetailsPlanet =()=>{
     return (
        <>
     <h1>Details</h1>
-    <img className="m-4" src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} />
+    <div className="container row">    
+    <img className="col-6 m-4" src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} />
+    <div className="col-4">
     <p>{detailPlanet.description}</p>
-    
-    
+    </div>
+    </div>
     </>
     )
 }
