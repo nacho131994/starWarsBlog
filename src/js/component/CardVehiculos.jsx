@@ -12,8 +12,8 @@ const urlDetails = `vehicles/${vehiculos.uid}`
   <img src={`https://starwars-visualguide.com/assets/img/vehicles/${vehiculos.uid}.jpg`} className="card-img mt-2" alt="..."/>
   <div className="card-body">
     <h3 className="card-title">{name}</h3>
-    <p>consumables:{vehiculos.properties.consumables}</p>
-    <p>vehicle class:{vehiculos.properties.vehicle_class}</p>
+    <p>Consumables: {vehiculos.properties.consumables}</p>
+    <p>Vehicle class: {vehiculos.properties.vehicle_class}</p>
             <div>
             <Link to={urlDetails} className="btn btn-primary btn-propierties">More info</Link>
             <Link to =""><img onClick={()=>addFavorite(name , urlDetails)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>

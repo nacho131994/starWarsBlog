@@ -16,8 +16,8 @@ const CardPlanet=({key , planet})=>{
     
     <div className="card-body"> 
     <h3 className="card-title">{name}</h3>
-        <p>{planet.properties.population}</p>
-        <p>{planet.properties.climate}</p>
+        <p>Population: {planet.properties.population}</p>
+        <p>Climate: {planet.properties.climate}</p>
         <div>
             <Link to={urlDetails} className="btn btn-primary btn-propierties">More info</Link>
             <Link to =""><img onClick={()=>addFavorite(name, urlDetails)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
@@ -32,11 +32,6 @@ const CardPlanet=({key , planet})=>{
 
 
    </>
-
-
-
-     
-      
      
     )
 }
