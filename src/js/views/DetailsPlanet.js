@@ -36,7 +36,7 @@ const DetailsPlanet =()=>{
     <p>population:surface water: {propertiesPlanet.surface_water}</p>
     <p>terrain: {propertiesPlanet.terrain}</p>
     <p>population: {propertiesPlanet.population}</p>
-    <p>population: {propertiesPlanet.population}</p>
+   
     </div>
     </div>
     </>
