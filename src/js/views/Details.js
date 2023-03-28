@@ -25,8 +25,6 @@ console.log("PARAMS:", params)
 return (
    <>
   
-
-
 <div className="container m-auto row">
 <h1>Details</h1>
 <img className="col-4 m-4" src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} />
@@ -38,7 +36,7 @@ return (
 <p>created: {properties.created}</p>
 <p>height: {properties.height}</p>
 <p>eye_color: {properties.eye_color}</p>
-<p>skin_color:  {properties.skin_color}</p>
+<p>skin_color: {properties.skin_color}</p>
 
 </div>
 </div>
