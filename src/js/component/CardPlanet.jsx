@@ -6,6 +6,7 @@ const CardPlanet=({key , planet})=>{
     const {store , actions} = useAppContext();
     const { addFavorite } = actions;
    const name = planet.properties.name;
+   const urlDetails= `planet/${planet.uid}`;
     return(
 <>
 <div class="col-sm-4">
@@ -18,8 +19,8 @@ const CardPlanet=({key , planet})=>{
         <p>{planet.properties.population}</p>
         <p>{planet.properties.climate}</p>
         <div>
-            <Link to={`planet/${planet.uid}`} className="btn btn-primary btn-propierties">More info</Link>
-            <Link to =""><img onClick={()=>addFavorite(name)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
+            <Link to={urlDetails} className="btn btn-primary btn-propierties">More info</Link>
+            <Link to =""><img onClick={()=>addFavorite(name, urlDetails)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
             </Link>
         </div>   
     </div>

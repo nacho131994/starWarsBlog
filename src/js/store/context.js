@@ -46,9 +46,10 @@ const getCharacters = (setState , url) => {
   }, []);
 
 
-  const addFavorite =(name)=>{
+  const addFavorite =(name , id)=>{
     const newFavorite ={
-      name
+      name,
+      id
     } ;
 
     setFavoriteList([...favoriteList , newFavorite])

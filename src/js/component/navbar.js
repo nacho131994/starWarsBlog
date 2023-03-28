@@ -28,7 +28,7 @@ export const Navbar = () => {
 				return (
 
             	<li className="d-flex">
-					<a className="dropdown-item" key={i} href="#">{item.name}</a>
+					<Link to={item.id} className="dropdown-item" key={i} href="#">{item.name}</Link>
 					<img className="iconDelete" onClick={()=>handelDeleteFavorite(item.name)} src="https://ayudawp.com/wp-content/uploads/2018/04/borrar-plugins-wordpress.png"/>
 				</li>
 			)})
