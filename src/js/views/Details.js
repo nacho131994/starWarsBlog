@@ -31,12 +31,12 @@ return (
 <div className="col-4">
 <h1>{properties.name}</h1>
 
-<p>{detailPeople.description}</p>
-<p>birth_year: {properties.birth_year}</p>
-<p>created: {properties.created}</p>
-<p>height: {properties.height}</p>
-<p>eye_color: {properties.eye_color}</p>
-<p>skin_color: {properties.skin_color}</p>
+<h2>{detailPeople.description}</h2>
+<p>Birth year: {properties.birth_year}</p>
+<p>Created: {properties.created}</p>
+<p>Height: {properties.height}</p>
+<p>Eye color: {properties.eye_color}</p>
+<p>Skin color: {properties.skin_color}</p>
 
 </div>
 </div>

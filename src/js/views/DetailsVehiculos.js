@@ -25,25 +25,25 @@ const DetailsVehiculos =()=>{
 
     return (
        <>
+    
+    <div className="container m-auto row">    
     <h1>Details</h1>
-    <div className="container row">    
     <img className="col-6 m-4" src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`} />
     
     <div className="col-4">
     <h1>{propertiesVehucles.name}</h1>
-    <p>{detailsVehiculos.description}</p>
-    <p>model: {propertiesVehucles.model}</p>
-    <p>cargo_capacity: {propertiesVehucles.cargo_capacity}</p>
-    <p>consumables: {propertiesVehucles.consumables}</p>
-    <p>cost in credits: {propertiesVehucles.cost_in_credits}</p>
-    <p>created: {propertiesVehucles.created}</p>
-    <p>edited: {propertiesVehucles.edited}</p>
-    <p>cargo_capacity: {propertiesVehucles.films}</p>
-    <p>manufacturer: {propertiesVehucles.manufacturer}</p>
-    <p>length: {propertiesVehucles.length}</p>
-    <p>max atmosphering speed: {propertiesVehucles.max_atmosphering_speed}</p>
-    <p>passengers: {propertiesVehucles.passengers}</p>
-    <p>vehicle class: {propertiesVehucles.vehicle_class}</p>
+    <h2>{detailsVehiculos.description}</h2>
+    <p>Model: {propertiesVehucles.model}</p>
+    <p>Cargo capacity: {propertiesVehucles.cargo_capacity}</p>
+    <p>Consumables: {propertiesVehucles.consumables}</p>
+    <p>Cost in credits: {propertiesVehucles.cost_in_credits}</p>
+    <p>Created: {propertiesVehucles.created}</p>
+    <p>Edited: {propertiesVehucles.edited}</p>
+    <p>Manufacturer: {propertiesVehucles.manufacturer}</p>
+    <p>Length: {propertiesVehucles.length}</p>
+    <p>Max atmosphering speed: {propertiesVehucles.max_atmosphering_speed}</p>
+    <p>Passengers: {propertiesVehucles.passengers}</p>
+    <p>Vehicle class: {propertiesVehucles.vehicle_class}</p>
     </div>
     </div>
     </>

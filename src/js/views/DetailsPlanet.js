@@ -27,15 +27,15 @@ const DetailsPlanet =()=>{
     <img className="col-6 m-4" src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} />
     <div className="col-4">
     <h1>{propertiesPlanet.name}</h1>
-    <p>{detailPlanet.description}</p>
-    <p>climate: {propertiesPlanet.climate}</p>
-    <p>created: {propertiesPlanet.created}</p>
-    <p>diameter: {propertiesPlanet.diameter}</p>
-    <p>edited: {propertiesPlanet.edited}</p>
-    <p>orbital period: {propertiesPlanet.orbital_period}</p>
-    <p>population:surface water: {propertiesPlanet.surface_water}</p>
-    <p>terrain: {propertiesPlanet.terrain}</p>
-    <p>population: {propertiesPlanet.population}</p>
+    <h2>{detailPlanet.description}</h2>
+    <p>Climate: {propertiesPlanet.climate}</p>
+    <p>Created: {propertiesPlanet.created}</p>
+    <p>Diameter: {propertiesPlanet.diameter}</p>
+    <p>Edited: {propertiesPlanet.edited}</p>
+    <p>Orbital period: {propertiesPlanet.orbital_period}</p>
+    <p>Population:surface water: {propertiesPlanet.surface_water}</p>
+    <p>Terrain: {propertiesPlanet.terrain}</p>
+    <p>Population: {propertiesPlanet.population}</p>
    
     </div>
     </div>
