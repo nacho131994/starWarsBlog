@@ -26,8 +26,9 @@ return (
    <>
   
 
+
+<div className="container m-auto row">
 <h1>Details</h1>
-<div className="container row">
 <img className="col-4 m-4" src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} />
 <div className="col-4">
 <h1>{properties.name}</h1>
