@@ -12,6 +12,7 @@ import DetailsPlanet from "./views/DetailsPlanet.js";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Loader from "./component/loader.js";
+import DetailsVehiculos from "./views/DetailsVehiculos.js";
 //create your first component
 const Layout = () => {
 
@@ -26,6 +27,7 @@ const Layout = () => {
             <Route path="/" element={<Home />} />
             <Route path="people/:id" element={<Details />} />
             <Route path="planet/:id" element={<DetailsPlanet />} />
+            <Route path="vehicles/:id" element={<DetailsVehiculos />} />
             <Route path="*" element={<h1>Not found!</h1>} />
           </Routes>
           <Footer />
