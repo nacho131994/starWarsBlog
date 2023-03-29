@@ -36,22 +36,34 @@ height: 300px;
     width: 330px;
     border-radius: 5px;
     border: solid 3px rgb(199, 199, 45);
-    margin: 5px;
+    margin: 10px;
     text-align: center;
   }
   
-
   .card-img{
 width: 250px;
-
+height: 300px;
   }
 
-  
+ .card-title{
+margin: 30px;
+
+ } 
+.card-body{
+height: 250px;
+
+
+}
+.buttonsCard{
+ width: 300px;
+  height: 60px;
+}
   .btn-propierties {
+
     background: white;
     width: 150px;
-   padding: 5px;
-   padding-left: 10px;
+    padding: 5px;
+    padding-left: 10px;
     border-radius: 20px;
     color: #a3a3a3;
     font-size: 15px;
@@ -85,7 +97,7 @@ width: 250px;
   
   
  .dontFavorite{
-  text-align: center;
+text-align: center;
 margin: 10px;
 font-size: 10px;
 color: grey;

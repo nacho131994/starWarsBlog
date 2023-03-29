@@ -51,9 +51,18 @@ const getCharacters = (setState , url) => {
       name,
       id
     } ;
-
+    console.log(newFavorite.name)
+  const posList = favoriteList.findIndex(function(e){
+    return e.name == newFavorite.name ;
+  })
+  if(posList > -1 ){
+    favoriteList.splice(posList, 1 )
+  }else{
     setFavoriteList([...favoriteList , newFavorite])
 
+  }
+    
+   
   }
 
 const handelDeleteFavorite=(nameFavoriteDelete) => {

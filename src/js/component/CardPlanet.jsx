@@ -9,7 +9,7 @@ const CardPlanet=({key , planet})=>{
    const urlDetails= `planet/${planet.uid}`;
     return(
 <>
-<div class="col-sm-4">
+<div class="col-md-6 col-sd-6 col-lg-4">
     <div className="card-sw cardStyle">
     <div key={planet.uid} className=" m-3 ">
         <img src={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`} className="card-img" alt="..."/>
@@ -18,12 +18,12 @@ const CardPlanet=({key , planet})=>{
     <h3 className="card-title">{name}</h3>
         <p>Population: {planet.properties.population}</p>
         <p>Climate: {planet.properties.climate}</p>
-        <div>
+     </div>   
+        <div className="buttonsCard">
             <Link to={urlDetails} className="btn btn-primary btn-propierties">More info</Link>
             <Link to =""><img onClick={()=>addFavorite(name, urlDetails)} className="iconLike" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8moNqBsueRrMKWQJeVKTeO2oHHUyfS6jr_g&usqp=CAU"/>
             </Link>
         </div>   
-    </div>
     </div>
     </div>
 
