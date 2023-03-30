@@ -33,7 +33,7 @@ const DetailsPlanet =()=>{
     <p>Diameter: {propertiesPlanet.diameter}</p>
     <p>Edited: {propertiesPlanet.edited}</p>
     <p>Orbital period: {propertiesPlanet.orbital_period}</p>
-    <p>Population:surface water: {propertiesPlanet.surface_water}</p>
+    <p>Surface water: {propertiesPlanet.surface_water}</p>
     <p>Terrain: {propertiesPlanet.terrain}</p>
     <p>Population: {propertiesPlanet.population}</p>
    

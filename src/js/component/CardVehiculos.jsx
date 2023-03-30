@@ -10,7 +10,7 @@ const urlDetails = `vehicles/${vehiculos.uid}`
 <div class="col-md-6 col-sd-6 col-lg-4">
  <div className="card-sw cardStyle " key={key}>
   <img src={`https://starwars-visualguide.com/assets/img/vehicles/${vehiculos.uid}.jpg`} className="card-img mt-2" alt="..."/>
-  <div className="card-body">
+  <div className="card-body-vehicles">
     <h3 className="card-title">{name}</h3>
     <p>Consumables: {vehiculos.properties.consumables}</p>
     <p>Vehicle class: {vehiculos.properties.vehicle_class}</p>
