@@ -15,7 +15,7 @@ export const Home = () => {
   return (
     <>
     <div className="container p-4">
-        <h1>Characters</h1>
+        <h1 className="titleCardGroup">Characters</h1>
         <div className="card-group">
         <div className="row">
         {people.map((characters, index) => (
@@ -26,7 +26,7 @@ export const Home = () => {
       </div>
     </div>
   <div className= "container  p-4">
-<h1>Planets</h1>
+<h1 className="titleCardGroup">Planets</h1>
 <div className="card-group">
         <div className="row">
 					{planets.map((planet,i)=>{
@@ -36,7 +36,7 @@ export const Home = () => {
 </div>
 </div>
 <div className="container p-4">
-				<h1>Vehicles</h1>
+				<h1 className="titleCardGroup">Vehicles</h1>
         <div className="card-group">
         <div className="row">
 					{vehiculos.map((vehicle,i)=>{

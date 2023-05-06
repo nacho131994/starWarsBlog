@@ -20,9 +20,9 @@ const urlDetails = `people/${characters.uid}`;
       
        <div className="card-body"> 
      
-             <p>Hair color: {characters.properties.hair_color}</p>
-             <p>Gender: {characters.properties.gender}</p>
-             <p>Eye color: {characters.properties.eye_color}
+             <p><strong>HAIR COLOR</strong>: {characters.properties.hair_color}</p>
+             <p><strong>GENDER</strong>: {characters.properties.gender}</p>
+             <p><strong>EYE COLOR</strong>: {characters.properties.eye_color}
              </p>
         </div>
         <div className="buttonsCard">  

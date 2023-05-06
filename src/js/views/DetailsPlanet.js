@@ -22,20 +22,20 @@ const DetailsPlanet =()=>{
     return (
        <>
     
-    <div className="container m-auto row"> 
-    <h1>Details</h1>   
-    <img className="col-6 m-4" src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} />
-    <div className="col-4">
+    <div className="container m-auto row "> 
+    <h1 className="details"><strong>DETAILS</strong></h1>   
+    <img className="col-6 m-4 planetPhoto" src={`https://starwars-visualguide.com/assets/img/planets/${id}.jpg`} />
+    <div className="col-4 detailsPlanets">
     <h1>{propertiesPlanet.name}</h1>
     <h2>{detailPlanet.description}</h2>
-    <p>Climate: {propertiesPlanet.climate}</p>
-    <p>Created: {propertiesPlanet.created}</p>
-    <p>Diameter: {propertiesPlanet.diameter}</p>
-    <p>Edited: {propertiesPlanet.edited}</p>
-    <p>Orbital period: {propertiesPlanet.orbital_period}</p>
-    <p>Surface water: {propertiesPlanet.surface_water}</p>
-    <p>Terrain: {propertiesPlanet.terrain}</p>
-    <p>Population: {propertiesPlanet.population}</p>
+    <p><u>Climate</u>: {propertiesPlanet.climate}</p>
+    <p><u>Created</u>: {propertiesPlanet.created}</p>
+    <p><u>Diameter</u>: {propertiesPlanet.diameter}</p>
+    <p><u>Edited</u>: {propertiesPlanet.edited}</p>
+    <p><u>Orbital period</u>: {propertiesPlanet.orbital_period}</p>
+    <p><u>Surface water</u>: {propertiesPlanet.surface_water}</p>
+    <p><u>Terrain</u>: {propertiesPlanet.terrain}</p>
+    <p><u>Population</u>: {propertiesPlanet.population}</p>
    
     </div>
     </div>

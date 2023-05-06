@@ -27,23 +27,23 @@ const DetailsVehiculos =()=>{
        <>
     
     <div className="container m-auto row">    
-    <h1>Details</h1>
-    <img className="col-6 m-4" src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`} />
+    <h1 className="details"><strong>Details</strong></h1>
+    <img className="col-6 m-4 vehiclePhoto" src={`https://starwars-visualguide.com/assets/img/vehicles/${id}.jpg`} />
     
-    <div className="col-4">
+    <div className="col-4 detailsVehicles">
     <h1>{propertiesVehucles.name}</h1>
     <h2>{detailsVehiculos.description}</h2>
-    <p>Model: {propertiesVehucles.model}</p>
-    <p>Cargo capacity: {propertiesVehucles.cargo_capacity}</p>
-    <p>Consumables: {propertiesVehucles.consumables}</p>
-    <p>Cost in credits: {propertiesVehucles.cost_in_credits}</p>
-    <p>Created: {propertiesVehucles.created}</p>
-    <p>Edited: {propertiesVehucles.edited}</p>
-    <p>Manufacturer: {propertiesVehucles.manufacturer}</p>
-    <p>Length: {propertiesVehucles.length}</p>
-    <p>Max atmosphering speed: {propertiesVehucles.max_atmosphering_speed}</p>
-    <p>Passengers: {propertiesVehucles.passengers}</p>
-    <p>Vehicle class: {propertiesVehucles.vehicle_class}</p>
+    <p><u>Model</u>: {propertiesVehucles.model}</p>
+    <p><u>Cargo capacity:</u>{propertiesVehucles.cargo_capacity}</p>
+    <p><u>Consumables</u>: {propertiesVehucles.consumables}</p>
+    <p><u>Cost in credits:</u> {propertiesVehucles.cost_in_credits}</p>
+    <p><u>Created</u>: {propertiesVehucles.created}</p>
+    <p><u>Edited</u>: {propertiesVehucles.edited}</p>
+    <p><u>Manufacturer</u>: {propertiesVehucles.manufacturer}</p>
+    <p><u>Length</u>: {propertiesVehucles.length}</p>
+    <p><u>Max atmosphering speed:</u>{propertiesVehucles.max_atmosphering_speed}</p>
+    <p><u>Passengers</u>: {propertiesVehucles.passengers}</p>
+    <p><u>Vehicle class:</u> {propertiesVehucles.vehicle_class}</p>
     </div>
     </div>
     </>

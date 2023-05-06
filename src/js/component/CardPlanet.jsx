@@ -16,8 +16,8 @@ const CardPlanet=({key , planet})=>{
     
     <div className="card-body"> 
     <h3 className="card-title">{name}</h3>
-        <p>Population: {planet.properties.population}</p>
-        <p>Climate: {planet.properties.climate}</p>
+        <p><strong>POPULATION</strong>: {planet.properties.population}</p>
+        <p><strong>CLIMATE</strong>: {planet.properties.climate}</p>
      </div>   
         <div className="buttonsCard">
             <Link to={urlDetails} className="btn btn-primary btn-propierties">More info</Link>

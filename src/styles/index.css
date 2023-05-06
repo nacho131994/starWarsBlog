@@ -1,8 +1,14 @@
 /* 
     General Styles
 */
+
+.navbar{
+  background-color: black;
+  border-bottom:2px solid yellow
+}
 .letras{
-    font-size: 10px;;
+    font-size: 10px;
+    
 }
 .loader-background{
 height: 100vh;
@@ -10,16 +16,18 @@ width: 100vw;
 display: flex;
 justify-content: center;
 align-items: center;
+
 }
 body {
  
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     
   }
   .iconNavbar{
-width: 500px;
-height: 300px;
+width: 300px;
+height: 200px;
+
 
   }
   a {
@@ -35,9 +43,14 @@ height: 300px;
   .cardStyle{
     width: 330px;
     border-radius: 5px;
-    border: solid 3px rgb(199, 199, 45);
+    border: solid 3px rgb(0, 0, 0);
     margin: 10px;
     text-align: center;
+    background-color: white;
+    -webkit-box-shadow: 12px 10px 0px 0px rgba(119, 114, 114, 0.75);
+-moz-box-shadow: 12px 10px 0px 0px rgba(119, 114, 114, 0.75);
+box-shadow: 12px 10px 0px 0px rgba(119, 114, 114, 0.75);
+
   }
   
   .card-img{
@@ -65,30 +78,35 @@ height: 200px;
     padding: 5px;
     padding-left: 10px;
     border-radius: 20px;
-    color: #a3a3a3;
+    color: black;
     font-size: 15px;
-    box-shadow: -3px -5px 7px #e7d217bd;
+    background-color: black;
+    color:white
+   
     
   }
   
   .dropdownStyle{
 
   text-decoration: none;
-  margin-right: 20px;
+  margin-right: 200px;
   padding-left: 0;
-  background-color: rgb(127, 140, 214);
+    height:80px;
+    width:300px;
+  background-color:rgb(129, 123, 123);
   border-radius: 5px;
   list-style: none;
   border: #a3a3a3;
+  font-size: 50px;
 
   }
    
   .iconLike{
     width: 25px;
-    float:right;
-    border-radius: 30%;
-    border:solid 1px #f70202;
-    box-shadow: 3px 5px 7px #f70202;
+    margin-left:40px;
+  color:red
+  
+  
   }
   .iconLike:hover{
   width: 30px;
@@ -105,11 +123,43 @@ color: grey;
  }
 
  .iconDelete{
-  width: 25px;
-  height: 15px;
+  width:35px;
+  height:25px;
   margin: 3px;
+ }
+ .iconDelete:hover{
+  cursor: pointer;
  }
  .iconLikeFavorite{
 width: 25px;
 
  }
+ .titleCardGroup{
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  margin-bottom:10px;
+  border:3px solid yellow;
+  color:yellow;
+  border-radius:10px
+ }
+ .details{
+  background-color: black; 
+  color:yellow;
+  text-align: center;
+  border-radius:10px
+ }
+ .detailsVehicles,.detailsPlanets, .detailsPeople, .peoplePhoto, .vehiclePhoto, .planetPhoto{
+  border:2px solid black;
+  border-radius:10px; 
+  margin-top: 24px;
+ }
+.iconFooter{
+  background-color: white;
+  height:70px;
+  width:100px;
+}
+.peoplePhoto, .vehiclePhoto, .planetPhoto{
+  border:2px solid black;
+  border-radius:10px,;
+  padding:2rem
+}

@@ -25,18 +25,18 @@ console.log("PARAMS:", params)
 return (
    <>
   
-<div className="container m-auto row">
-<h1>Details</h1>
-<img className="col-4 m-4" src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} />
-<div className="col-4">
+<div className="container m-auto row ">
+<h1 className="details"><strong>Details</strong></h1>
+<img className="col-4 m-4 peoplePhoto" src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} />
+<div className="col-4 detailsPeople">
 <h1>{properties.name}</h1>
 
 <h2>{detailPeople.description}</h2>
-<p>Birth year: {properties.birth_year}</p>
-<p>Created: {properties.created}</p>
-<p>Height: {properties.height}</p>
-<p>Eye color: {properties.eye_color}</p>
-<p>Skin color: {properties.skin_color}</p>
+<p><u>Birth year</u>: {properties.birth_year}</p>
+<p><u>Created</u>: {properties.created}</p>
+<p><u>Height</u>: {properties.height}</p>
+<p><u>Eye color</u>: {properties.eye_color}</p>
+<p><u>Skin color</u>: {properties.skin_color}</p>
 
 </div>
 </div>

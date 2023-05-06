@@ -12,8 +12,8 @@ const urlDetails = `vehicles/${vehiculos.uid}`
   <img src={`https://starwars-visualguide.com/assets/img/vehicles/${vehiculos.uid}.jpg`} className="card-img mt-2" alt="..."/>
   <div className="card-body-vehicles">
     <h3 className="card-title">{name}</h3>
-    <p>Consumables: {vehiculos.properties.consumables}</p>
-    <p>Vehicle class: {vehiculos.properties.vehicle_class}</p>
+    <p><strong>CONSUMABLES</strong>: {vehiculos.properties.consumables}</p>
+    <p><strong>VEHICLE CLASS</strong> : {vehiculos.properties.vehicle_class}</p>
   </div>
   <div className="buttonsCard">
     <Link to={urlDetails} className="btn btn-primary btn-propierties">More info</Link>
